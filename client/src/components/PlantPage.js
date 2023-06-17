@@ -21,9 +21,11 @@ function PlantPage() {
     setPlants(updatedPlantsArray);
   }
 
+  
   const displayedPlants = plants.filter((plant) => {
-    return plant.name.toLowerCase().includes(searchTerm.toLowerCase());
+    return plant.name && plant.name.toLowerCase().includes(searchTerm.toLowerCase());
   });
+  
 
   return (
     <main>
